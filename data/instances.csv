@@ -1,0 +1,9 @@
+# capability,Message,TypeOfMsg
+Depth_Sensing,LaserScan,Sensor_msg
+Color_Sensing,Image,Sensor_msg
+BodyPart_Mvt,MultiDOFJointState,Sensor_msg
+Light_Sensing,Illuminance,Sensor_msg
+Battery_Sensing,BatteryState,Sensor_msg
+Directional_Mvt,Odometry,Nav_msg
+Map_InternalRepresentation,GetMap,Nav_msg
+Map_InternalRepresentation,SetMap,Nav_msg

@@ -1,0 +1,74 @@
+2016-12-08 16:25:50 INFO  OntoRobCapabilityMain:37 - #1 - Start...
+2016-12-08 16:25:50 INFO  OntoRobCapabilityMain:40 - #2 - Loading TDB...
+2016-12-08 16:25:50 DEBUG Jena:189 - Jena initialization
+2016-12-08 16:25:50 DEBUG FileManager:157 - Add location: LocatorFile
+2016-12-08 16:25:50 DEBUG FileManager:157 - Add location: ClassLoaderLocator
+2016-12-08 16:25:50 DEBUG LocationMapper:152 - Failed to find configuration: file:location-mapping.rdf;file:location-mapping.n3;file:location-mapping.ttl;file:etc/location-mapping.rdf;file:etc/location-mapping.n3;file:etc/location-mapping.ttl
+2016-12-08 16:25:50 DEBUG FileManager:157 - Add location: LocatorFile
+2016-12-08 16:25:50 DEBUG FileManager:157 - Add location: LocatorURL
+2016-12-08 16:25:50 DEBUG FileManager:157 - Add location: ClassLoaderLocator
+2016-12-08 16:25:50 DEBUG JenaIOEnvironment:180 - Failed to find configuration: location-mapping.ttl;location-mapping.rdf;location-mapping.n3;etc/location-mapping.rdf;etc/location-mapping.n3;etc/location-mapping.ttl
+2016-12-08 16:25:51 DEBUG info:334 - System architecture: 64 bit
+2016-12-08 16:25:51 DEBUG StreamManager:93 - open(data/ontoRob3.nt)
+2016-12-08 16:25:51 DEBUG StreamManager:112 - Not mapped: data/ontoRob3.nt
+2016-12-08 16:25:51 DEBUG StreamManager:142 - Found: data/ontoRob3.nt (LocatorFile)
+2016-12-08 16:25:51 DEBUG info:398 - File mode: Mapped
+2016-12-08 16:25:51 DEBUG info:160 - Build database: /Users/ilariatiddi/LunaWorkspace/robo-capabilities-proj/data/tdb/
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG info:215 - Triple table: SPO :: SPO,POS,OSP
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG info:235 - Quad table: GSPO :: GSPO,GPOS,GOSP,POSG,OSPG,SPOG
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:75 - Segment:8388608  BlockSize=8192  blocksPerSegment=1024
+2016-12-08 16:25:51 DEBUG info:264 - Prefixes: GPU :: GPU
+2016-12-08 16:25:51 DEBUG info:351 - Statistics-based BGP optimizer
+2016-12-08 16:25:51 DEBUG LockMRSW:57 - Lock : main
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:225 - Segment: 0
+2016-12-08 16:25:51 INFO  loader:150 - Load: from input stream -- 2016/12/08 16:25:51 GMT
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:225 - Segment: 0
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:225 - Segment: 0
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:225 - Segment: 0
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:225 - Segment: 0
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:225 - Segment: 0
+2016-12-08 16:25:51 INFO  OntoRobCapabilityMain:49 - #3 - All good, loaded.
+2016-12-08 16:25:51 INFO  OntoRobCapabilityMain:75 - Query : SELECT ?capa WHERE { VALUES(?res) { (<http://data.open.ac.uk/kmi/ontoRob/resource/ApplyPlanningScene>) (<http://data.open.ac.uk/kmi/ontoRob/resource/PoseWithCovarianceStamped>) } ?capa <http://data.open.ac.uk/kmi/ontoRob/property/isEvokedBy> ?res  }
+2016-12-08 16:25:51 DEBUG TDB:685 - Txn[1]/R: begin$
+2016-12-08 16:25:51 DEBUG info:215 - Triple table: SPO :: SPO,POS,OSP
+2016-12-08 16:25:51 DEBUG info:235 - Quad table: GSPO :: GSPO,GPOS,GOSP,POSG,OSPG,SPOG
+2016-12-08 16:25:51 DEBUG info:264 - Prefixes: GPU :: GPU
+2016-12-08 16:25:51 DEBUG LockMRSW:57 - Lock : main
+2016-12-08 16:25:51 DEBUG TDB:685 - Txn[1]/R: start
+2016-12-08 16:25:51 DEBUG LockMRSW:88 - main >> enterCS: Thread R/W: 0/0 :: Model R/W: 0/0 (thread: main)
+2016-12-08 16:25:51 DEBUG LockMRSW:128 - main << enterCS: Thread R/W: 1/0 :: Model R/W: 1/0 (thread: main)
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:225 - Segment: 0
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:225 - Segment: 0
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:225 - Segment: 0
+2016-12-08 16:25:51 DEBUG BlockAccessMapped:225 - Segment: 0
+2016-12-08 16:25:51 INFO  OntoRobCapabilityMain:89 - Res - http://data.open.ac.uk/kmi/ontoRob#Placing_Mvt
+2016-12-08 16:25:51 INFO  OntoRobCapabilityMain:89 - Res - http://data.open.ac.uk/kmi/ontoRob#Grasping_mvt
+2016-12-08 16:25:51 INFO  OntoRobCapabilityMain:89 - Res - http://data.open.ac.uk/kmi/ontoRob#Directional_Mvt
+2016-12-08 16:25:51 INFO  OntoRobCapabilityMain:89 - Res - http://data.open.ac.uk/kmi/ontoRob#Navigation_Mvt
+2016-12-08 16:25:51 INFO  OntoRobCapabilityMain:89 - Res - http://data.open.ac.uk/kmi/ontoRob#Orientation
+2016-12-08 16:25:51 DEBUG TDB:685 - Txn[1]/R: finish
+2016-12-08 16:25:51 DEBUG LockMRSW:143 - main >> leaveCS: Thread R/W: 1/0 :: Model R/W: 1/0 (thread: main)
+2016-12-08 16:25:51 DEBUG LockMRSW:176 - main << leaveCS: Thread R/W: 0/0 :: Model R/W: 0/0 (thread: main)
