@@ -1,7 +1,6 @@
 package org.mksmart.ontoRob;
 
 
-
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +24,6 @@ import org.apache.jena.tdb.sys.TDBInternal;
 import org.apache.jena.util.FileManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 
 
 public class OntoRobCapabilityMain {
