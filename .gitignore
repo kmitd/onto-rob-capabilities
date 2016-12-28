@@ -3,3 +3,5 @@
 **/.classpath
 **/data/
 **/docs/
+**/src/main/.DS_Store
+**/src/main/webapp/
