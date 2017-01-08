@@ -26,7 +26,7 @@ public class OntoRobApp extends ResourceConfig implements ServletContextListener
 
 	public void contextInitialized(ServletContextEvent sce) {
 		
-        logger.info("#1 Loading TDB...");
+        logger.info("Loading TDB...");
         Location location = Location.create ("data/tdb");
     	
 		FileManager fm = FileManager.get();
@@ -36,7 +36,7 @@ public class OntoRobApp extends ResourceConfig implements ServletContextListener
         TDBLoader.load(TDBInternal.getBaseDatasetGraphTDB(TDBFactory.createDatasetGraph(location)), in, false);
             
         Dataset dataset = TDBFactory.createDataset(location);  
-        logger.info("#2 All good, loaded.");
+        logger.info("All good, loaded.");
         
         sce.getServletContext().setAttribute("dataset", dataset); 
 //        System.out.println("OK");

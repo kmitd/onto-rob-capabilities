@@ -5,7 +5,7 @@
 	<artifactId>robo-capabilities-proj</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>Simple Java</name>
+	<name>OntoRob App</name>
 
 	<!-- ??? -->
 	<properties>
@@ -54,6 +54,17 @@
 			<version>9.3.0.v20150612</version>
 		</dependency>
 
+	<dependency>
+		<groupId>org.eclipse.jetty</groupId>
+		<artifactId>jetty-jsp-2.1</artifactId>
+		<version>7.2.2.v20101205</version>
+	</dependency>
+	<dependency>
+		<groupId>org.mortbay.jetty</groupId>
+		<artifactId>jsp-2.1-glassfish</artifactId>
+		<version>2.1.v20100127</version>
+	</dependency>
+
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet</artifactId>
@@ -76,9 +87,15 @@
 	</dependencies>
 
 	<build>
-		<sourceDirectory>src/</sourceDirectory>
-		<testSourceDirectory>test/</testSourceDirectory>
+		<!-- <sourceDirectory>src/</sourceDirectory> -->
+		<!-- <testSourceDirectory>test/</testSourceDirectory> -->
 		<plugins>
+			<!--   
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.3.0.v20150612</version>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -90,16 +107,85 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>org.mksmart.robo.RoboCapabilityMain</mainClass>
+							<mainClass>org.mksmart.ontoRob.OntoRobApp</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>
 				</configuration>
-			</plugin>
+			</plugin> -->
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<configuration>
+						<archive>
+							<manifest>
+								<addClasspath>true</addClasspath>
+								<mainClass>org.mksmart.ontoRob.OntoRobApp</mainClass>
+							</manifest>
+						</archive>
+						<descriptorRefs>
+							<descriptorRef>jar-with-dependencies</descriptorRef>
+						</descriptorRefs>
+					</configuration>
+				</plugin> 
+				<plugin>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-maven-plugin</artifactId>
+					<version>9.3.0.M1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-shade-plugin</artifactId>
+					<version>2.4.3</version>
+					<executions>
+						<execution>
+							<phase>package</phase>
+							<goals>
+								<goal>shade</goal>
+							</goals>
+							<configuration>
+								<transformers>
+									<transformer
+										implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+										<mainClass>org.mksmart.ontoRob.server.RestServer</mainClass>
+									</transformer>
+									<transformer
+										implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+										<resource>META-INF/services/org.apache.jena.system.JenaSubsystemLifecycle</resource>
+									</transformer>
+								
+								</transformers>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			
 		</plugins>
-	</build>
+		<!-- <resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/**</include>
+					<include>**</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/webapp</directory>
+				<includes>
+					<include>**/**</include>
+				</includes>
+			</resource> 
+		</resources> -->
+	</build> 
+	
+	
 
 </project>
 
