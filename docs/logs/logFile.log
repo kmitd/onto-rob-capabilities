@@ -1,5 +1,11 @@
-2016-12-28 22:48:12 INFO  log:186 - Logging initialized @974ms
-2016-12-28 22:48:12 INFO  OntoRobApp:29 - #1 Loading TDB...
-2016-12-28 22:48:13 INFO  loader:150 - Load: from input stream -- 2016/12/28 22:48:13 GMT
-2016-12-28 22:48:13 INFO  OntoRobApp:39 - #2 All good, loaded.
-2016-12-28 22:48:28 INFO  OntoRobServer:97 - Query : SELECT ?capa WHERE { VALUES(?res) { (<http://data.open.ac.uk/kmi/ontoRob/resource/ApplyPlanningScene>) (<http://data.open.ac.uk/kmi/ontoRob/resource/PoseWithCovarianceStamped>) } ?capa <http://data.open.ac.uk/kmi/ontoRob/property/isEvokedBy> ?res  }
+2017-03-31 12:20:53 INFO  OntoRobApp:29 - Loading TDB...
+2017-03-31 12:20:54 INFO  loader:150 - Load: from input stream -- 2017/03/31 12:20:54 BST
+2017-03-31 12:20:54 INFO  OntoRobApp:39 - All good, loaded.
+2017-03-31 12:21:17 INFO  OntoRobServer:120 - For component /stageros/odom, query : SELECT ?capa WHERE { VALUES(?res) { (<http://data.open.ac.uk/kmi/ontoRob/resource/Odometry>) } ?capa <http://data.open.ac.uk/kmi/ontoRob/property/isEvokedBy> ?res  }
+2017-03-31 12:21:17 INFO  OntoRobServer:120 - For component /move_base/move_base/goal, query : SELECT ?capa WHERE { VALUES(?res) { (<http://data.open.ac.uk/kmi/ontoRob/resource/MoveBaseActionGoal>) } ?capa <http://data.open.ac.uk/kmi/ontoRob/property/isEvokedBy> ?res  }
+2017-03-31 12:21:17 INFO  OntoRobServer:120 - For component /stageros/scan, query : SELECT ?capa WHERE { VALUES(?res) { (<http://data.open.ac.uk/kmi/ontoRob/resource/LaserScan>) } ?capa <http://data.open.ac.uk/kmi/ontoRob/property/isEvokedBy> ?res  }
+2017-03-31 12:23:07 INFO  OntoRobServer:120 - For component /stageros/odom, query : SELECT ?capa WHERE { VALUES(?res) { (<http://data.open.ac.uk/kmi/ontoRob/resource/Odometry>) } ?capa <http://data.open.ac.uk/kmi/ontoRob/property/isEvokedBy> ?res  }
+2017-03-31 12:23:07 INFO  OntoRobServer:120 - For component /move_base/move_base/goal, query : SELECT ?capa WHERE { VALUES(?res) { (<http://data.open.ac.uk/kmi/ontoRob/resource/MoveBaseActionGoal>) } ?capa <http://data.open.ac.uk/kmi/ontoRob/property/isEvokedBy> ?res  }
+2017-03-31 12:23:07 INFO  OntoRobServer:120 - For component /stageros/scan, query : SELECT ?capa WHERE { VALUES(?res) { (<http://data.open.ac.uk/kmi/ontoRob/resource/LaserScan>) } ?capa <http://data.open.ac.uk/kmi/ontoRob/property/isEvokedBy> ?res  }
+2017-03-31 12:23:07 INFO  OntoRobServer:120 - For component /dht22/dht22_readings, query : SELECT ?capa WHERE { VALUES(?res) { (<http://data.open.ac.uk/kmi/ontoRob/resource/StdDht22Msg>) } ?capa <http://data.open.ac.uk/kmi/ontoRob/property/isEvokedBy> ?res  }
+2017-03-31 12:23:07 INFO  OntoRobServer:132 - Empty q! :(

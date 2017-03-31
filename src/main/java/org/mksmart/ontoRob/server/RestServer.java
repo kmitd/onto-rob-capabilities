@@ -8,11 +8,10 @@ import org.slf4j.LoggerFactory;
 
 
 
-public class RestServer {
+public class RestServer  {
 	
 	private static Logger logger = LoggerFactory.getLogger(RestServer.class);
 
-	
 	public static void main(String[] args) {
 		logger.info("#1: Server starting");
 		

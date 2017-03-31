@@ -1,0 +1,7 @@
+org/mksmart/ontoRob/OntoRobVocabulary.class
+org/mksmart/ontoRob/OntoRobCapabilityMain.class
+org/mksmart/ontoRob/server/OntoRobApp.class
+org/mksmart/ontoRob/server/OntoRobServer.class
+org/mksmart/ontoRob/KnowledgeBaseBuilder.class
+org/mksmart/ontoRob/OntoRobUtilities.class
+org/mksmart/ontoRob/server/RestServer.class
