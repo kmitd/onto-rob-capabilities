@@ -14,6 +14,7 @@ import javax.ws.rs.core.MediaType;
 
 import net.minidev.json.JSONArray;
 import net.minidev.json.JSONObject;
+import net.minidev.json.JSONStyle;
 
 import org.apache.jena.query.Dataset;
 import org.apache.jena.query.Query;
@@ -92,7 +93,6 @@ public class OntoRobServer {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getCapability(@QueryParam("jsonString") String jsonNodes) {
 
-		System.out.println(jsonNodes);
 		/**
 		 * from a json stinrg{}  
 		 **/
@@ -148,7 +148,7 @@ public class OntoRobServer {
 			
 
 			root.add(o);
-//			logger.info("{}",root);
+			logger.info("Response for '{}': {}",component, root.toJSONString(JSONStyle.MAX_COMPRESS));
 		}
 		
 
