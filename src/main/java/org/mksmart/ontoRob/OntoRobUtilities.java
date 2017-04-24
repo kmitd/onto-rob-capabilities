@@ -24,7 +24,7 @@ public class OntoRobUtilities {
 		for (int i = 0 ; i < len ; i++){
 			String node = JsonPath.read(document, "$.["+i+"].node");
 			String topic = JsonPath.read(document, "$.["+i+"].topic");
-			String component = node+topic;
+			String component = node+"::"+topic;
 			if (!response.containsKey(component)){
 				response.put(component, new ArrayList<String>());
 			}
