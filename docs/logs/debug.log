@@ -841,3 +841,8 @@ Content-Type: application/json
 2017-04-28 16:47:49 DEBUG session:347 - Scavenging sessions at 1493394469044
 2017-04-28 16:48:19 DEBUG session:347 - Scavenging sessions at 1493394499049
 2017-04-28 16:48:49 DEBUG session:347 - Scavenging sessions at 1493394529052
+2017-04-28 16:49:19 DEBUG session:347 - Scavenging sessions at 1493394559053
+2017-04-28 16:49:49 DEBUG session:347 - Scavenging sessions at 1493394589056
+2017-04-28 16:50:19 DEBUG session:347 - Scavenging sessions at 1493394619057
+2017-04-28 16:50:49 DEBUG session:347 - Scavenging sessions at 1493394649058
+2017-04-28 16:51:19 DEBUG session:347 - Scavenging sessions at 1493394679063
