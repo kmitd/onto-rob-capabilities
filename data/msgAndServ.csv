@@ -28,7 +28,7 @@ msg,move_base_msgs,MoveBaseActionFeedback,[Navigation_Movement],,
 msg,move_base_msgs,MoveBaseActionGoal,[Navigation_Movement],,
 msg,move_base_msgs,MoveBaseGoal,[Navigation_Movement],,
 msg,move_base_msgs,MoveBaseAction,[Navigation_Movement],,
-srv,nav_msgs,GetPlan,[Navigation_Movement],wr,[start, goal, plan]
+srv,nav_msgs,GetPlan,[Navigation_Movement],wr,[start; goal; plan]
 msg,sensor_msgs,BatteryState,[Self_Sensing; Battery_Sensing],r,
 msg,sensor_msgs,Illuminance,[Light_Sensing],r,[illuminance]
 msg,sensor_msgs,RelativeHumidity,[Humidity_Sensing],r,[relative_humidity]
