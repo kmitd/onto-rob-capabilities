@@ -51,9 +51,9 @@ msg,sensor_msgs,JoyFeedback,[Teleoperation],wr,[type; id; intensity]
 msg,sensor_msgs,JoyFeedbackArray,[Teleoperation],wr,[array[k]]
 msg,sensor_msgs,JointState,[Body_part_Movement],r,[name[k]; position[k]; velocity[k]; effort[k]]
 msg,sensor_msgs,MultiDOFJointState,[Body_part_Movement],r,[joint_names[k]; transform[k]; twist[k]; wrench[k]]
-msg,trajectory_msgs,JointTrajectory,[Body_part_Movement],w,[joint_names, points]
+msg,trajectory_msgs,JointTrajectory,[Body_part_Movement],w,[joint_names; points]
 msg,trajectory_msgs,JointTrajectoryPoint,[Body_part_Movement],w,[position[k]; velocities[k]; acceleration[k]; effort[k]]
-msg,trajectory_msgs,MultiDOFJointTrajectory,[Body_part_Movement],w,[joint_names, points]
+msg,trajectory_msgs,MultiDOFJointTrajectory,[Body_part_Movement],w,[joint_names; points]
 msg,trajectory_msgs,MultiDOFJointTrajectoryPoint,[Body_part_Movement],w,[transform[k]; velocities[k]; acceleration[k]]
 msg,shape_msgs,Mesh,[Internal_Representation_Shape],,
 msg,shape_msgs,MeshTriangle,[Internal_Representation_Shape],,
