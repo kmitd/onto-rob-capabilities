@@ -1,7 +1,7 @@
 # (msg|srv|act),package,(msg|srv|act)_name,[listOfCapabilities],(w|r|wr),[fields]
 
 # Orientation
-# Give a generic geometrical information, usually used as a "submessage" in combination with position
+# Give a generic geometrical information, usually used as a submessage in combination with position
 # as a sensor: i.e. IMU estimates robot orientation
 # as an input: i.e. goal for a 6dof robot [x, y, z] + [x, y, z, q]
 # It is better to consider the whole message and maybe the structure of the topic
