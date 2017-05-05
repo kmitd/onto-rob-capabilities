@@ -9,10 +9,6 @@ geometry_msg,AccelStamped
 geometry_msg,AccelWithCovariance
 geometry_msg,AccelWithCovarianceStamped
 
-?
-geometry_msg,Polygon                                           #Navigation_Mvt (sometimes used to describe robot footprint)
-geometry_msg,PolygonStamped                                    #^^^
-
 Robot_position
 geometry_msg,Pose,
 geometry_msg,Pose2D
@@ -22,10 +18,15 @@ geometry_msg,PoseWithCovariance
 geometry_msg,PoseWithCovarianceStamped
 
 Orientation (is it useful to GIVE an orientation?)
+Give a generic geometrical information, usually used as a "submessage" in combination with position
+as a sensor: i.e. IMU estimates robot orientation
+as an input: i.e. goal for a 6dof robot [x, y, z] + [x, y, z, q]
+It is better to consider the whole message and maybe the structure of the topic
 geometry_msg,Quaternion
 geometry_msg,QuaternionStamped
 
-Directional_Movement (could also be a sensor (gyroscope))
+Directional_Movement
+Did some research, gyro are usually Vector3, Twist is only directional movement
 geometry_msg,Twist
 geometry_msg,TwistStamped
 geometry_msg,TwistWithCovariance
@@ -36,8 +37,10 @@ nav_msg,GridCells
 nav_msg,MapMetaData
 nav_msg,OccupancyGrid
 
-Robot_position, Robot_speed (can it be used to GIVE speed and position?)
+Robot_position, Robot_speed
+Odometry it's always a "sensor", it is wrong to use it to command the robot
 nav_msg,Odometry
+sensor_msg,Imu
 
 Navigation_Movement
 nav_msg,Path
@@ -57,24 +60,17 @@ nav_act,GetMap
 Self_Sensing, Battery_Sensing
 sensor_msg,BatteryState,[Battery_Sensing]
 
-sensor_msg,CameraInfo (maybe we can ignore this one)
-
 Vision
 sensor_msg,CompressedImage
+sensor_msg,Image
 
 Light_sensing
 sensor_msg,Illuminance,[Light_Sensing]
 
-Vision
-sensor_msg,Image
-
-TO BE CHECKED
-sensor_msg,Imu,[Gravity_Sensing]                                                                #angular velocity + linear acceleration + orientation 
-
 Body_part_Movement
 sensor_msg,JointState
 
-Maneuverability (I know it's horrible)
+Teleoperation
 sensor_msg,Joy
 sensor_msg,JoyFeedback
 sensor_msg,JoyFeedbackArray
@@ -92,7 +88,7 @@ sensor_msg,MultiDOFJointState
 Depth_Sensing
 sensor_msg,MultiEchoLaserScan
 
-GPS_Sensing, Navigation_Movement
+GPS_Sensing
 sensor_msg,NavSatFix
 sensor_msg,NavSatStatus
 
