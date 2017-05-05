@@ -1,13 +1,4 @@
-# (msg|srv|act),package,(msg|srv|act)_name,[listOfCapabilities],(w|r|wr),[fields]
-#
-# Orientation
-# Give a generic geometrical information, usually used as a submessage in combination with position
-# as a sensor: i.e. IMU estimates robot orientation
-# as an input: i.e. goal for a 6dof robot [x, y, z] + [x, y, z, q]
-# It is better to consider the whole message and maybe the structure of the topic
-# geometry_msgs,Quaternion
-# geometry_msgs,QuaternionStamped
-#
+(msg|srv|act),package,(msg|srv|act)_name,[listOfCapabilities],(w|r|wr),[fields]
 msg,geometry_msgs,Accel,[Directional_Movement],w,[linear; angular]
 msg,geometry_msgs,AccelStamped,[Directional_Movement],w,[accel/linear; accel/angular]
 msg,geometry_msgs,AccelWithCovariance,[Directional_Movement],w,[accel/linear; accel/angular]
@@ -16,7 +7,6 @@ msg,geometry_msgs,Twist,[Directional_Movement],w,[linear; angular]
 msg,geometry_msgs,TwistStamped,[Directional_Movement],w,[twist/linear; twist/angular]
 msg,geometry_msgs,TwistWithCovariance,[Directional_Movement],w,[twist/linear; twist/angular]
 msg,geometry_msgs,TwistWithCovarianceStamped,[Directional_Movement],w,[twist/twist/linear; twist/twist/angular]
-#
 msg,geometry_msgs,Pose,[Robot_position],r,[position; orientation]
 msg,geometry_msgs,Pose2D,[Robot_position],r,[x; y; theta]
 msg,geometry_msgs,PoseStamped,[Robot_position],r,[pose/position; pose/orientation]
@@ -24,57 +14,48 @@ msg,geometry_msgs,PoseWithCovariance,[Robot_position],r,[pose/position; pose/ori
 msg,geometry_msgs,PoseWithCovarianceStamped,[Robot_position],r,[pose/pose/position; pose/pose/orientation]
 msg,nav_msgs,Odometry,[Robot_position; Robot_speed],r,[pose/position; pose/orientation; twist/linear; twist/angular]
 msg,sensor_msgs,Imu,[Robot_position; Robot_speed],r,[orientation; angular_velocity; linear_acceleration]
-#
-msg,nav_msgs,GridCells,[Map_representation]
-msg,nav_msgs,MapMetaData,[Map_representation]
-msg,nav_msgs,OccupancyGrid,[Map_representation]
-srv,nav_msgs,GetMap,[Map_representation]
-srv,nav_msgs,SetMap,[Map_representation]
-act,nav_msgs,GetMap,[Map_representation]
-#
+msg,nav_msgs,GridCells,[Map_representation],,
+msg,nav_msgs,MapMetaData,[Map_representation],,
+msg,nav_msgs,OccupancyGrid,[Map_representation],,
+srv,nav_msgs,GetMap,[Map_representation],,
+srv,nav_msgs,SetMap,[Map_representation],,
+act,nav_msgs,GetMap,[Map_representation],,
 msg,nav_msgs,Path,[Navigation_Movement],wr,[poses[k]/pose/position; poses[k]/pose/orientation]
-msg,move_base_msgs,MoveBaseResult,[Navigation_Movement]
-msg,move_base_msgs,MoveBaseActionResult,[Navigation_Movement]
-msg,move_base_msgs,MoveBaseFeedback,[Navigation_Movement]
-msg,move_base_msgs,MoveBaseActionFeedback,[Navigation_Movement]
-msg,move_base_msgs,MoveBaseActionGoal,[Navigation_Movement]
-msg,move_base_msgs,MoveBaseGoal,[Navigation_Movement]
-msg,move_base_msgs,MoveBaseAction,[Navigation_Movement]
+msg,move_base_msgs,MoveBaseResult,[Navigation_Movement],,
+msg,move_base_msgs,MoveBaseActionResult,[Navigation_Movement],,
+msg,move_base_msgs,MoveBaseFeedback,[Navigation_Movement],,
+msg,move_base_msgs,MoveBaseActionFeedback,[Navigation_Movement],,
+msg,move_base_msgs,MoveBaseActionGoal,[Navigation_Movement],,
+msg,move_base_msgs,MoveBaseGoal,[Navigation_Movement],,
+msg,move_base_msgs,MoveBaseAction,[Navigation_Movement],,
 srv,nav_msgs,GetPlan,[Navigation_Movement],wr,[start, goal, plan]
-#
-msg,sensor_msgs,BatteryState,[Self_Sensing; Battery_Sensing],r
+msg,sensor_msgs,BatteryState,[Self_Sensing; Battery_Sensing],r,
 msg,sensor_msgs,Illuminance,[Light_Sensing],r,[illuminance]
 msg,sensor_msgs,RelativeHumidity,[Humidity_Sensing],r,[relative_humidity]
 msg,sensor_msgs,Temperature,[Temperature_Sensing],r,[temperature]
 msg,sensor_msgs,TimeReference,[Time_Sensing],r,[time_ref]
-#
 msg,sensor_msgs,MagneticField,[Magnetic_Field_Sensing],r,[magnetic_field]
 msg,sensor_msgs,NavSatFix,[GPS_Sensing],r,[status/status; latitude; longitude; altitude]
-#
 msg,sensor_msgs,LaserEcho,[Depth_Sensing],r,[echoes[k]]
 msg,sensor_msgs,LaserScan,[Depth_Sensing],r,[ranges[k]]
 msg,sensor_msgs,MultiEchoLaserScan,[Depth_Sensing],r,[ranges[k]/echoes[k]]
 msg,sensor_msgs,PointCloud,[Depth_Sensing],r,[points[k]]
-msg,sensor_msgs,PointCloud2,[Depth_Sensing],r
+msg,sensor_msgs,PointCloud2,[Depth_Sensing],r,
 msg,sensor_msgs,Range,[Depth_Sensing],r,[range]
-#
 msg,sensor_msgs,CompressedImage,[Vision],r,[data]
 msg,sensor_msgs,Image,[Vision],r,[height; width; data]
 msg,sensor_msgs,RegionOfInterest,[Vision],r,[x_offset; y_offset; height; width]
 msg,stereo_msgs,DisparityImage,[Vision],r,[image; valid_window]
-#
 msg,sensor_msgs,Joy,[Teleoperation],wr,[axes, buttons]
 msg,sensor_msgs,JoyFeedback,[Teleoperation],wr,[type, id, intensity]
 msg,sensor_msgs,JoyFeedbackArray,[Teleoperation],wr,[array[k]]
-#
 msg,sensor_msgs,JointState,[Body_part_Movement],r,[name[k]; position[k]; velocity[k]; effort[k]]
 msg,sensor_msgs,MultiDOFJointState,[Body_part_Movement],r,[joint_names[k]; transform[k]; twist[k]; wrench[k]]
 msg,trajectory_msgs,JointTrajectory,[Body_part_Movement],w,[joint_names, points]
 msg,trajectory_msgs,JointTrajectoryPoint,[Body_part_Movement],w,[position[k]; velocities[k]; acceleration[k]; effort[k]]
 msg,trajectory_msgs,MultiDOFJointTrajectory,[Body_part_Movement],w,[joint_names, points]
 msg,trajectory_msgs,MultiDOFJointTrajectoryPoint,[Body_part_Movement],w,[transform[k]; velocities[k]; acceleration[k]]
-#
-msg,shape_msgs,Mesh,[Internal_Representation_Shape]
-msg,shape_msgs,MeshTriangle,[Internal_Representation_Shape]
-msg,shape_msgs,Plane,[Internal_Representation_Shape]
-msg,shape_msgs,SolidPrimitive,[Internal_Representation_Shape]
+msg,shape_msgs,Mesh,[Internal_Representation_Shape],,
+msg,shape_msgs,MeshTriangle,[Internal_Representation_Shape],,
+msg,shape_msgs,Plane,[Internal_Representation_Shape],,
+msg,shape_msgs,SolidPrimitive,[Internal_Representation_Shape],,
