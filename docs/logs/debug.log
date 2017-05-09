@@ -3213,3 +3213,8 @@ Content-Type: application/json
 2017-05-09 11:45:52 DEBUG session:347 - Scavenging sessions at 1494326752795
 2017-05-09 11:46:22 DEBUG session:347 - Scavenging sessions at 1494326782800
 2017-05-09 11:46:52 DEBUG session:347 - Scavenging sessions at 1494326812802
+2017-05-09 11:47:22 DEBUG session:347 - Scavenging sessions at 1494326842807
+2017-05-09 11:47:52 DEBUG session:347 - Scavenging sessions at 1494326872811
+2017-05-09 11:48:22 DEBUG session:347 - Scavenging sessions at 1494326902817
+2017-05-09 11:48:52 DEBUG session:347 - Scavenging sessions at 1494326932820
+2017-05-09 11:49:22 DEBUG session:347 - Scavenging sessions at 1494326962826
