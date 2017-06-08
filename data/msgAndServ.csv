@@ -1,26 +1,26 @@
 (msg|srv|act),package,(msg|srv|act)_name,[listOfCapabilities],(w|r|wr),[fields]
-msg,geometry_msgs,Accel,[Directional_Movement],w,[linear; angular]
-msg,geometry_msgs,AccelStamped,[Directional_Movement],w,[accel/linear; accel/angular]
-msg,geometry_msgs,AccelWithCovariance,[Directional_Movement],w,[accel/linear; accel/angular]
-msg,geometry_msgs,AccelWithCovarianceStamped,[Directional_Movement],w,[accel/accel/linear; accel/accel/angular]
-msg,geometry_msgs,Twist,[Directional_Movement],w,[linear; angular]
-msg,geometry_msgs,TwistStamped,[Directional_Movement],w,[twist/linear; twist/angular]
-msg,geometry_msgs,TwistWithCovariance,[Directional_Movement],w,[twist/linear; twist/angular]
-msg,geometry_msgs,TwistWithCovarianceStamped,[Directional_Movement],w,[twist/twist/linear; twist/twist/angular]
-msg,geometry_msgs,Pose,[Robot_position],r,[position; orientation]
-msg,geometry_msgs,Pose2D,[Robot_position],r,[x; y; theta]
-msg,geometry_msgs,PoseStamped,[Robot_position],r,[pose/position; pose/orientation]
-msg,geometry_msgs,PoseWithCovariance,[Robot_position],r,[pose/position; pose/orientation]
-msg,geometry_msgs,PoseWithCovarianceStamped,[Robot_position],r,[pose/pose/position; pose/pose/orientation]
-msg,nav_msgs,Odometry,[Robot_position; Robot_speed],r,[pose/position; pose/orientation; twist/linear; twist/angular]
-msg,sensor_msgs,Imu,[Robot_position; Robot_speed],r,[orientation; angular_velocity; linear_acceleration]
+msg,geometry_msgs,Accel,[Directional_Movement],w,[[linear.x; linear.y; linear.z; angular.x; angular.y; angular.z]]
+msg,geometry_msgs,AccelStamped,[Directional_Movement],w,[[accel.linear.x; accel.linear.y; accel.linear.z; accel.angular.x; accel.angular.y; accel.angular.z]]
+msg,geometry_msgs,AccelWithCovariance,[Directional_Movement],w,[[accel.linear.x; accel.linear.y; accel.linear.z; accel.angular.x; accel.angular.y; accel.angular.z]]
+msg,geometry_msgs,AccelWithCovarianceStamped,[Directional_Movement],w,[[accel.accel.linear.x; accel.accel.linear.y; accel.accel.linear.z; accel.accel.angular.x; accel.accel.angular.y; accel.accel.angular.z]]
+msg,geometry_msgs,Twist,[Directional_Movement],w,[[linear.x; linear.y; linear.z; angular.x; angular.y; angular.z]]
+msg,geometry_msgs,TwistStamped,[Directional_Movement],w,[[twist.linear.x; twist.linear.y; twist.linear.z; twist.angular.x; twist.angular.y; twist.angular.z]]
+msg,geometry_msgs,TwistWithCovariance,[Directional_Movement],w,[[twist.linear.x; twist.linear.y; twist.linear.z; twist.angular.x; twist.angular.y; twist.angular.z]]
+msg,geometry_msgs,TwistWithCovarianceStamped,[Directional_Movement],w,[[twist.twist.linear.x; twist.twist.linear.y; twist.twist.linear.z; twist.twist.angular.x; twist.twist.angular.y; twist.twist.angular.z]]
+msg,geometry_msgs,Pose,[Robot_position; Navigation_Movement],wr,[[position.x; position.y; position.z; orientation.x; orientation.y; orientation.z; orientation.w]; [position.x; position.y; position.z; orientation.x; orientation.y; orientation.z; orientation.w]]
+msg,geometry_msgs,Pose2D,[Robot_position; Navigation_Movement],r,[[x; y; theta]; [x; y; theta]]
+msg,geometry_msgs,PoseStamped,[Robot_position; Navigation_Movement],r,[[pose.position.x; pose.position.y; pose.position.z; pose.orientation.x; pose.orientation.y; pose.orientation.z; pose.orientation.w]; [pose.position.x; pose.position.y; pose.position.z; pose.orientation.x; pose.orientation.y; pose.orientation.z; pose.orientation.w; header.frame_id]]
+msg,geometry_msgs,PoseWithCovariance,[Robot_position; Navigation_Movement],r,[[pose.position.x; pose.position.y; pose.position.z; pose.orientation.x; pose.orientation.y; pose.orientation.z; pose.orientation.w]; [pose.position.x; pose.position.y; pose.position.z; pose.orientation.x; pose.orientation.y; pose.orientation.z; pose.orientation.w]]
+msg,geometry_msgs,PoseWithCovarianceStamped,[Robot_position; Navigation_Movement],r,[[pose.pose.position.x; pose.pose.position.y; pose.pose.position.z; pose.pose.orientation.x; pose.pose.orientation.y; pose.pose.orientation.z; pose.pose.orientation.w]; [pose.pose.position.x; pose.pose.position.y; pose.pose.position.z; pose.pose.orientation.x; pose.pose.orientation.y; pose.pose.orientation.z; pose.pose.orientation.w; header.frame_id]]
+msg,nav_msgs,Odometry,[Robot_position; Robot_speed],r,[[pose.pose.position.x; pose.pose.position.y; pose.pose.position.z; pose.pose.orientation.x; pose.pose.orientation.y; pose.pose.orientation.z; pose.pose.orientation.w]; [twist.twist.linear.x; twist.twist.linear.y; twist.twist.linear.z; twist.twist.angular.x; twist.twist.angular.y; twist.twist.angular.z]]
+msg,sensor_msgs,Imu,[Robot_position; Robot_speed],r,[[orientation.x; orientation.y; orientation.z; orientation.w]; [angular_velocity.x; angular_velocity.y; angular_velocity.z; linear_acceleration.x; linear_acceleration.y; linear_acceleration.z]]
 msg,nav_msgs,GridCells,[Map_representation],,
 msg,nav_msgs,MapMetaData,[Map_representation],,
 msg,nav_msgs,OccupancyGrid,[Map_representation],,
 srv,nav_msgs,GetMap,[Map_representation],,
 srv,nav_msgs,SetMap,[Map_representation],,
 act,nav_msgs,GetMap,[Map_representation],,
-msg,nav_msgs,Path,[Navigation_Movement],wr,[poses[k]/pose/position; poses[k]/pose/orientation]
+msg,nav_msgs,Path,[Navigation_Movement],wr,[[poses[k].pose.position.x; poses[k].pose.position.y; poses[k].pose.position.z; poses[k].pose.orientation.x; poses[k].pose.orientation.y; poses[k].pose.orientation.z; poses[k].pose.orientation.w]]
 msg,move_base_msgs,MoveBaseResult,[Navigation_Movement],,
 msg,move_base_msgs,MoveBaseActionResult,[Navigation_Movement],,
 msg,move_base_msgs,MoveBaseFeedback,[Navigation_Movement],,
@@ -35,10 +35,10 @@ msg,sensor_msgs,RelativeHumidity,[Humidity_Sensing],r,[relative_humidity]
 msg,sensor_msgs,Temperature,[Temperature_Sensing],r,[temperature]
 msg,sensor_msgs,TimeReference,[Time_Sensing],r,[time_ref]
 msg,sensor_msgs,MagneticField,[Magnetic_Field_Sensing],r,[magnetic_field]
-msg,sensor_msgs,NavSatFix,[GPS_Sensing],r,[status/status; latitude; longitude; altitude]
+msg,sensor_msgs,NavSatFix,[GPS_Sensing],r,[status.status; latitude; longitude; altitude]
 msg,sensor_msgs,LaserEcho,[Depth_Sensing],r,[echoes[k]]
 msg,sensor_msgs,LaserScan,[Depth_Sensing],r,[ranges[k]]
-msg,sensor_msgs,MultiEchoLaserScan,[Depth_Sensing],r,[ranges[k]/echoes[k]]
+msg,sensor_msgs,MultiEchoLaserScan,[Depth_Sensing],r,[ranges[k].echoes[k]]
 msg,sensor_msgs,PointCloud,[Depth_Sensing],r,[points[k]]
 msg,sensor_msgs,PointCloud2,[Depth_Sensing],r,
 msg,sensor_msgs,Range,[Depth_Sensing],r,[range]
