@@ -20,7 +20,7 @@ msg,nav_msgs,OccupancyGrid,[Map_representation],,
 srv,nav_msgs,GetMap,[Map_representation],,
 srv,nav_msgs,SetMap,[Map_representation],,
 act,nav_msgs,GetMap,[Map_representation],,
-msg,nav_msgs,Path,[Navigation_Movement],wr,[[poses[k].pose.position.x; poses[k].pose.position.y; poses[k].pose.position.z; poses[k].pose.orientation.x; poses[k].pose.orientation.y; poses[k].pose.orientation.z; poses[k].pose.orientation.w]]
+msg,nav_msgs,Path,[Navigation_Movement],wr,[[poses[].pose.position.x; poses[].pose.position.y; poses[].pose.position.z; poses[].pose.orientation.x; poses[].pose.orientation.y; poses[].pose.orientation.z; poses[].pose.orientation.w]]
 msg,move_base_msgs,MoveBaseResult,[Navigation_Movement],,
 msg,move_base_msgs,MoveBaseActionResult,[Navigation_Movement],,
 msg,move_base_msgs,MoveBaseFeedback,[Navigation_Movement],,
@@ -28,33 +28,33 @@ msg,move_base_msgs,MoveBaseActionFeedback,[Navigation_Movement],,
 msg,move_base_msgs,MoveBaseActionGoal,[Navigation_Movement],,
 msg,move_base_msgs,MoveBaseGoal,[Navigation_Movement],,
 msg,move_base_msgs,MoveBaseAction,[Navigation_Movement],,
-srv,nav_msgs,GetPlan,[Navigation_Movement],wr,[start; goal; plan]
-msg,sensor_msgs,BatteryState,[Self_Sensing; Battery_Sensing],r,
-msg,sensor_msgs,Illuminance,[Light_Sensing],r,[illuminance]
-msg,sensor_msgs,RelativeHumidity,[Humidity_Sensing],r,[relative_humidity]
-msg,sensor_msgs,Temperature,[Temperature_Sensing],r,[temperature]
-msg,sensor_msgs,TimeReference,[Time_Sensing],r,[time_ref]
-msg,sensor_msgs,MagneticField,[Magnetic_Field_Sensing],r,[magnetic_field]
-msg,sensor_msgs,NavSatFix,[GPS_Sensing],r,[status.status; latitude; longitude; altitude]
-msg,sensor_msgs,LaserEcho,[Depth_Sensing],r,[echoes[k]]
-msg,sensor_msgs,LaserScan,[Depth_Sensing],r,[ranges[k]]
-msg,sensor_msgs,MultiEchoLaserScan,[Depth_Sensing],r,[ranges[k].echoes[k]]
-msg,sensor_msgs,PointCloud,[Depth_Sensing],r,[points[k]]
+srv,nav_msgs,GetPlan,[Navigation_Movement],wr,[[start.pose.position.x; start.pose.position.y; start.pose.position.z; start.pose.orientation.x; start.pose.orientation.y; start.pose.orientation.z; start.pose.orientation.w; start.header.frame_id; goal.pose.position.x; goal.pose.position.y; goal.pose.position.z; goal.pose.orientation.x; goal.pose.orientation.y; goal.pose.orientation.z; goal.pose.orientation.w; goal.header.frame_id; plan.poses[].pose.position.x; plan.poses[].pose.position.y; plan.poses[].pose.position.z; plan.poses[].pose.orientation.x; plan.poses[].pose.orientation.y; plan.poses[].pose.orientation.z; plan.poses[].pose.orientation.w]]
+msg,sensor_msgs,BatteryState,[Self_Sensing; Battery_Sensing],r,[[charge]]
+msg,sensor_msgs,Illuminance,[Light_Sensing],r,[[illuminance]]
+msg,sensor_msgs,RelativeHumidity,[Humidity_Sensing],r,[[relative_humidity]]
+msg,sensor_msgs,Temperature,[Temperature_Sensing],r,[[temperature]]
+msg,sensor_msgs,TimeReference,[Time_Sensing],r,[[time_ref]]
+msg,sensor_msgs,MagneticField,[Magnetic_Field_Sensing],r,[[magnetic_field.x; magnetic_field.y; magnetic_field.z]]
+msg,sensor_msgs,NavSatFix,[GPS_Sensing],r,[[status.status; latitude; longitude; altitude]]
+msg,sensor_msgs,LaserEcho,[Depth_Sensing],r,[echoes[]]
+msg,sensor_msgs,LaserScan,[Depth_Sensing],r,[ranges[]]
+msg,sensor_msgs,MultiEchoLaserScan,[Depth_Sensing],r,[ranges[].echoes[]]
+msg,sensor_msgs,PointCloud,[Depth_Sensing],r,[[points[]]]
 msg,sensor_msgs,PointCloud2,[Depth_Sensing],r,
-msg,sensor_msgs,Range,[Depth_Sensing],r,[range]
-msg,sensor_msgs,CompressedImage,[Vision],r,[data]
-msg,sensor_msgs,Image,[Vision],r,[height; width; data]
-msg,sensor_msgs,RegionOfInterest,[Vision],r,[x_offset; y_offset; height; width]
-msg,stereo_msgs,DisparityImage,[Vision],r,[image; valid_window]
-msg,sensor_msgs,Joy,[Teleoperation],wr,[axes; buttons]
-msg,sensor_msgs,JoyFeedback,[Teleoperation],wr,[type; id; intensity]
-msg,sensor_msgs,JoyFeedbackArray,[Teleoperation],wr,[array[k]]
-msg,sensor_msgs,JointState,[Body_part_Movement],r,[name[k]; position[k]; velocity[k]; effort[k]]
-msg,sensor_msgs,MultiDOFJointState,[Body_part_Movement],r,[joint_names[k]; transform[k]; twist[k]; wrench[k]]
-msg,trajectory_msgs,JointTrajectory,[Body_part_Movement],w,[joint_names; points]
-msg,trajectory_msgs,JointTrajectoryPoint,[Body_part_Movement],w,[position[k]; velocities[k]; acceleration[k]; effort[k]]
-msg,trajectory_msgs,MultiDOFJointTrajectory,[Body_part_Movement],w,[joint_names; points]
-msg,trajectory_msgs,MultiDOFJointTrajectoryPoint,[Body_part_Movement],w,[transform[k]; velocities[k]; acceleration[k]]
+msg,sensor_msgs,Range,[Depth_Sensing],r,[[range]]
+msg,sensor_msgs,CompressedImage,[Vision],r,[[data[]]]
+msg,sensor_msgs,Image,[Vision],r,[[height; width; data[]]]
+msg,sensor_msgs,RegionOfInterest,[Vision],r,[[x_offset; y_offset; height; width]]
+msg,stereo_msgs,DisparityImage,[Vision],r,[[image.height; image.width; image.data[]; valid_window.x_offset; valid_window.y_offset; valid_window.height; valid_window.width]]
+msg,sensor_msgs,Joy,[Teleoperation],wr,[[axes[]; buttons[]]]
+msg,sensor_msgs,JoyFeedback,[Teleoperation],wr,[[type; id; intensity]]
+msg,sensor_msgs,JoyFeedbackArray,[Teleoperation],wr,[[array[]]]
+msg,sensor_msgs,JointState,[Body_part_Movement],r,[[name[]; position[]; velocity[]; effort[]]]
+msg,sensor_msgs,MultiDOFJointState,[Body_part_Movement],r,[[joint_names[]; transform[]; twist[]; wrench[]]]
+msg,trajectory_msgs,JointTrajectory,[Body_part_Movement],w,[[joint_names; points]]
+msg,trajectory_msgs,JointTrajectoryPoint,[Body_part_Movement],w,[[position[]; velocities[]; acceleration[]; effort[]]]
+msg,trajectory_msgs,MultiDOFJointTrajectory,[Body_part_Movement],w,[[joint_names; points][
+msg,trajectory_msgs,MultiDOFJointTrajectoryPoint,[Body_part_Movement],w,[[transform[]; velocities[]; acceleration[]]]
 msg,shape_msgs,Mesh,[Internal_Representation_Shape],,
 msg,shape_msgs,MeshTriangle,[Internal_Representation_Shape],,
 msg,shape_msgs,Plane,[Internal_Representation_Shape],,
